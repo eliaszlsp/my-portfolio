@@ -7,7 +7,7 @@ export function About() {
     "html5icon",
     "css3icon",
     "javascripticon",
-    "githubicon",
+    "giticon",
     "reacticon",
     "tailwindcssicon",
     "graphqlicon",
@@ -20,17 +20,14 @@ export function About() {
      items-center justify-around gap-y-5 text-white  "
     >
       <section className=" flex w-[1440px] flex-col items-center  justify-between">
-        <div className=" text-5xl font-bold">
-          <h1> Sobre</h1>
-        </div>
-        <div className="flex w-[1440px] flex-row items-center  justify-between">
+        <div className="flex h-[800px] w-[1440px] flex-row items-center  justify-between">
           <div>
-            <div className="slide-in-blurred-left   ">
-              <h1 className="flex self-start text-center text-2xl  font-bold">
+            <div className="slide-in-blurred-left  ">
+              <h1 className="flex self-start text-center text-6xl   font-thin">
                 Frontend Developer
               </h1>
               <br />
-              <p className=" w-96 text-white ">
+              <p className="  w-[700px]  font-mono text-white  ">
                 Olá! Sou o Elias Lopes, um Desenvolvedor Front-end apaixonado
                 por tecnologia e inovação. Aqui neste portfólio, você encontrará
                 projetos que utilizam as principais tecnologias front-end do
@@ -56,7 +53,7 @@ export function About() {
       </section>
 
       <section className=" flex w-[1440px] flex-col items-center  justify-between">
-        <div className=" text-5xl font-bold">
+        <div className=" text-5xl  font-bold">
           <h1> Sobre</h1>
         </div>
         <div className="flex w-[1440px] flex-row items-center  justify-between">
@@ -66,18 +63,15 @@ export function About() {
                 Frontend Developer
               </h1>
               <br />
-              <p className=" w-96 text-white ">
-                Olá! Meu nome é Elias. Sou um[a] [Profissão] apaixonado[a] por
-                [Área de Atuação]. Com [X] anos de experiência, desenvolvi{" "}
-                <br />
-                habilidades sólidas em [Habilidades Principais],
-                <br />
-                sempre buscando aprimorar meus conhecimentos e acompanhar as
-                tendências do mercado. Ao longo da minha carreira, tive a
-                oportunidade de trabalhar em diversos projetos desafiadores,{" "}
-                <br />
-                desde [Tipo de Projeto] até [Outro Tipo de Projeto]. Essas
-                experiências me permitiram adquirir uma compreensão profunda de
+              <p className="  w-[700px] text-white   ">
+                Olá! Sou o Elias Lopes, um Desenvolvedor Front-end apaixonado
+                por tecnologia e inovação. Aqui neste portfólio, você encontrará
+                projetos que utilizam as principais tecnologias front-end do
+                mercado, resultando em interfaces atraentes e interativas.
+                Explore-os para desvendar o potencial das soluções digitais que
+                posso criar. Estou empolgado para compartilhar minhas ideias e
+                trabalhar em projetos emocionantes com você! Vamos construir
+                algo incrível! 🚀🎨
               </p>
             </div>
           </div>
