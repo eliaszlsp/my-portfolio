@@ -4,7 +4,7 @@ import { Logo } from "./logo";
 // teste o f2 para renonear variavelz
 export function Header() {
   return (
-    <header className="flex h-16 w-screen flex-row justify-center bg-[#387492f2] ">
+    <header className="flex h-16 w-screen flex-row justify-center bg-[#5CA5BC] ">
       <div className="flex w-[1440px]  flex-row items-center justify-between">
         <div className="   left-4 ">
           <Logo />
