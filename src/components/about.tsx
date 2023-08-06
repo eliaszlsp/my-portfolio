@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Footer } from "./footer";
+
+import Projects from "./projects";
 
 export function About() {
   const photosElements = [
@@ -88,11 +88,11 @@ export function About() {
                   <div className=" flex w-[700px] flex-col leading-loose">
                     <p className="mb-2">
                       Olá! Eu sou o Elias Lopes, alguém que recentemente
-                      descobriu a área de desenvolvimento. Isso aconteceu após
-                      sentir uma forte vontade de realizar uma transição de
-                      carreira, pois eu estava trabalhando na área de
-                      comunicação como operador de Telemarketing e recebendo um
-                      salário com o qual não estava satisfeito.
+                      descobriu a área de desenvolvimento de software. Isso
+                      aconteceu após sentir uma forte vontade de realizar uma
+                      transição de carreira, pois eu estava trabalhando na área
+                      de comunicação como operador de Telemarketing e recebendo
+                      um salário com o qual não estava satisfeito.
                     </p>
                     <p className="mb-2">
                       Um dia, um amigo meu, que é desenvolvedor, me questionou:
@@ -162,45 +162,7 @@ export function About() {
           </div>
         </section>
 
-        <section className=" flex w-[1440px] flex-col items-center  justify-between">
-          <div className=" text-5xl font-bold">
-            <h1> Sobre</h1>
-          </div>
-          <div className="flex w-[1440px] flex-row items-center  justify-between">
-            <div>
-              <div className="slide-in-blurred-left   ">
-                <h1 className="text-center text-2xl  font-bold">
-                  Frontend Developer
-                </h1>
-                <br />
-                <p className=" w-96 text-white ">
-                  Olá! Meu nome é Elias. Sou um[a] [Profissão] apaixonado[a] por
-                  [Área de Atuação]. Com [X] anos de experiência, desenvolvi{" "}
-                  <br />
-                  habilidades sólidas em [Habilidades Principais],
-                  <br />
-                  sempre buscando aprimorar meus conhecimentos e acompanhar as
-                  tendências do mercado. Ao longo da minha carreira, tive a
-                  oportunidade de trabalhar em diversos projetos desafiadores,{" "}
-                  <br />
-                  desde [Tipo de Projeto] até [Outro Tipo de Projeto]. Essas
-                  experiências me permitiram adquirir uma compreensão profunda
-                  de
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <Image
-                className="animate-slide-in-blurred-right  inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
-                src="/codetyping-bro.svg"
-                alt="imagem aleatoria"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </section>
+        <Projects />
 
         {/* <footer className=" w-ful flex flex-col items-center justify-between bg-gray-500">
           <div className=" text-5xl font-bold">
