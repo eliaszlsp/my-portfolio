@@ -1,10 +1,12 @@
+"use client";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import Collapse from "react-collapse";
 
 export default function Projects() {
-  const [read, setRead] = useState("hidden");
+  const [read, setRead] = useState(false);
   const readMore = () => {
-    read === "block" ? setRead("hidden") : setRead("block");
+    !read ? setRead(true) : setRead(false);
   };
 
   return (
@@ -33,17 +35,22 @@ export default function Projects() {
                   Este projeto é uma homenagem feita a uma das maiores e mais
                   conhecidas coding schools do Brasil.
                 </p>
-                <div className={`${read} h-fit`}>
-                  <p>
-                    Ele é um clone da versão desktop da página inicial da
-                    Rocketseat. <br />
-                    Iniciei este projeto não apenas como uma homenagem, mas
-                    também como um desafio pessoal. Isso porque não havia nenhum
-                    tutorial disponível na internet ensinando a clonar esse
-                    site. Dessa forma, criei um clone que ninguém tinha feito,
-                    me desafiando ao aplicar meus conhecimentos na prática e
-                    também aprendendo coisas novas.
-                  </p>
+                <div className={``}>
+                  <Collapse
+                    className=".ReactCollapse--collapse"
+                    isOpened={read as boolean}
+                  >
+                    <p>
+                      Ele é um clone da versão desktop da página inicial da
+                      Rocketseat. <br />
+                      Iniciei este projeto não apenas como uma homenagem, mas
+                      também como um desafio pessoal. Isso porque não havia
+                      nenhum tutorial disponível na internet ensinando a clonar
+                      esse site. Dessa forma, criei um clone que ninguém tinha
+                      feito, me desafiando ao aplicar meus conhecimentos na
+                      prática e também aprendendo coisas novas.
+                    </p>
+                  </Collapse>
                 </div>
                 <div className=" text-center">
                   <button
