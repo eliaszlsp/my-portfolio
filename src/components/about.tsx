@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Projects from "./projects";
+import { useEffect } from "react";
 
-export function About() {
+export function About(props: any) {
   const photosElements = [
     "html5icon",
     "css3icon",
@@ -14,55 +16,61 @@ export function About() {
     "graphqlicon",
     "nodejsicon",
   ];
+  useEffect(() => {
+    AOS.init({
+      initClassName: "aos-init",
+      animatedClassName: "aos-animate",
+      mirror: false,
+    });
+  }, []);
   // icones baixados do icons8
   return (
     <div>
       <main
-        className="  animate-slide-in-blurred-left animate-slide mt-5 flex h-max w-screen flex-col 
+        className="  mt-14  flex h-max w-screen flex-col 
      items-center justify-around gap-y-5 text-white  "
       >
         <section className=" flex w-[1440px] flex-col items-center  justify-between">
           <div className="mt-12 flex h-full w-[1440px] flex-row items-center justify-between">
             <div className=" flex flex-col gap-12 ">
-              <div className="slide-in-blurred-left flex flex-col items-center justify-center   ">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="50"
+                className=" flex flex-col items-center justify-center   "
+              >
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
-                  <span className="ml-44  text-3xl font-bold text-purple-800  ">
+                  <span className="ml-44  text-3xl font-bold text-[#47B4FC]  ">
                     Elias Lopes{" "}
                   </span>
                 </h1>
                 <br />
                 <p className="  w-[700px] text-white   ">
                   {" "}
-                  Eu sou
-                  <span className="  text-lg font-bold text-purple-800">
+                  Eu sou um
+                  <span className="  text-lg font-bold text-[#47B4FC]">
                     {" "}
                     Desenvolvedor Front-end ,
                   </span>{" "}
                   apaixonado por tecnologia e inovação. <br />
                   Neste portfólio, você encontrará uma coleção de projetos que
                   fazem uso das principais tecnologias front-end do mercado.{" "}
-                  Gostaria de explorar? Os links estão logo abaixo.
+                  Gostaria de explorar? Segue o link logo abaixo.
                 </p>
               </div>
-              <ul className="flex w-full flex-row items-center  justify-center gap-5 text-4xl font-bold">
+              <button
+                data-aos="zoom-in"
+                data-aos-delay="75"
+                className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl  font-semibold hover:bg-[#3586BD] "
+              >
                 {" "}
-                {/*  clicar e levar para parte da tela  */}
-                <li>
-                  <a href="#sobre">Sobre</a>
-                </li>
-                <li>
-                  <a href="#sobre">Skills</a>
-                </li>
-                <li>
-                  <a href="#projetos">Projetos</a>
-                </li>
-              </ul>
+                Projetos
+              </button>
             </div>
 
-            <div>
+            <div data-aos="zoom-in" data-aos-delay="150">
               <Image
-                className="animate-slide-in-blurred-right  inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
+                className=" inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
                 src="/codetyping-bro.svg"
                 alt="imagem aleatoria"
                 width={300}
@@ -72,24 +80,26 @@ export function About() {
           </div>
         </section>
 
-        <section className=" w-[1440px flex">
+        <section ref={props.referenceSobre} className=" w-[1440px flex">
           <div className="flex h-[800px] w-[1440px] flex-col  justify-evenly  gap-5">
-            <div className=" self-center text-5xl font-bold">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              className=" self-center text-5xl font-bold"
+            >
               <h1> Sobre mim </h1>
             </div>
 
             <div className="center flex flex-row justify-between">
-              <div>
-                <div className="slide-in-blurred-left   ">
-                  <h1 className="flex self-start text-center text-6xl   font-thin">
-                    Desenvolvedor Front-end
-                  </h1>
+              <div data-aos="zoom-in" data-aos-delay="250">
+                <div className="  ">
+                  <h1 className="flex self-start text-center text-6xl   font-thin"></h1>
                   <br />
-                  <div className=" flex w-[700px] flex-col leading-loose">
+                  <div className=" flex w-[700px] flex-col gap-3">
                     <p className="mb-2">
                       Olá! Eu sou o Elias Lopes, alguém que recentemente
                       descobriu a área de desenvolvimento de software. Isso
-                      aconteceu após sentir uma forte vontade de realizar uma
+                      aconteceu após eu sentir uma forte vontade de realizar uma
                       transição de carreira, pois eu estava trabalhando na área
                       de comunicação como operador de Telemarketing e recebendo
                       um salário com o qual não estava satisfeito.
@@ -121,9 +131,9 @@ export function About() {
                 </div>
               </div>
 
-              <div>
+              <div data-aos="zoom-in" data-aos-delay="300">
                 <Image
-                  className="animate-slide-in-blurred-right   "
+                  className="  "
                   src="/codetyping-bro.svg"
                   alt="imagem aleatoria"
                   width={300}
@@ -147,7 +157,7 @@ export function About() {
                 <li className=" text-center text-sm uppercase" key={index}>
                   <div className="w-fit">
                     <Image
-                      className="animate-slide-in-blurred-right w-[6.25rem]  
+                      className="w-[6.25rem]  
                 "
                       src={`/${nameElement}.svg`}
                       alt={`${nameElement.replace(/icon$/, "")}`}
@@ -194,7 +204,7 @@ export function About() {
 
             <div>
               <Image
-                className="animate-slide-in-blurred-right  inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
+                className=" inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
                 src="/codetyping-bro.svg"
                 alt="imagem aleatoria"
                 width={300}
