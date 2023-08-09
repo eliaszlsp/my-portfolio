@@ -6,6 +6,11 @@ import Projects from "./projects";
 import { useEffect } from "react";
 
 export function About(props: any) {
+  const handleClick = ({ projetos }: any) => {
+    projetos === "projetos"
+      ? props.referenceProjetos.current?.scrollIntoView({ behavior: "smooth" })
+      : "";
+  };
   const photosElements = [
     "html5icon",
     "css3icon",
@@ -40,7 +45,7 @@ export function About(props: any) {
               >
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
-                  <span className="ml-44  text-3xl font-bold text-[#47B4FC]  ">
+                  <span className="ml-44  text-3xl font-bold text-[#1d247d]  ">
                     Elias Lopes{" "}
                   </span>
                 </h1>
@@ -48,7 +53,7 @@ export function About(props: any) {
                 <p className="  w-[700px] text-white   ">
                   {" "}
                   Eu sou um
-                  <span className="  text-lg font-bold text-[#47B4FC]">
+                  <span className="  text-lg font-bold text-[#1d247d]">
                     {" "}
                     Desenvolvedor Front-end ,
                   </span>{" "}
@@ -58,14 +63,18 @@ export function About(props: any) {
                   Gostaria de explorar? Segue o link logo abaixo.
                 </p>
               </div>
-              <button
-                data-aos="zoom-in"
-                data-aos-delay="75"
-                className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl  font-semibold hover:bg-[#3586BD] "
-              >
-                {" "}
-                Projetos
-              </button>
+              <div data-aos="zoom-in" data-aos-delay="75">
+                <button
+                  className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                   transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
+                  onClick={() => {
+                    handleClick({ projetos: "projetos" });
+                  }}
+                >
+                  {" "}
+                  Projetos
+                </button>
+              </div>
             </div>
 
             <div data-aos="zoom-in" data-aos-delay="150">
@@ -113,20 +122,47 @@ export function About(props: any) {
                     </p>
                     <p className="mb-2">
                       Agora, estou apaixonado por criar experiências digitais
-                      incríveis e funcionais. Possuo proficiência em HTML5, CSS3
-                      e Javascript.
+                      incríveis e funcionais. Possuo proficiência em{" "}
+                      <span className=" text-[#1d247d]">HTML5 </span>,{" "}
+                      <span className=" text-[#1d247d]">CSS3 </span> e{" "}
+                      <span className=" text-[#1d247d]">Javascript </span>.
                     </p>
                     <p className="mb-2">
                       Quer conhecer mais da minha história e do meu trabalho?
                       Entre em contato comigo através deste{" "}
-                      <a
-                        href="[link de contato]"
-                        className="text-blue-500 hover:underline"
-                      >
-                        link de contato
-                      </a>
-                      .
                     </p>
+                    <div className=" flex flex-row gap-4">
+                      <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/eliaslopes1/"
+                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                      transition-all delay-100 ease-in  hover:bg-[#3586BD]
+                      "
+                      >
+                        <span className="hover:text-[#0072bb]">Linked</span>in
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/elias_lopessp/"
+                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                      transition-all delay-100 ease-in  hover:bg-[#3586BD]
+                      "
+                      >
+                        <span> Instagram </span>
+                      </a>
+                      <a
+                        href="https://wa.link/9n4ge3"
+                        target="_blank"
+                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                      transition-all delay-100 ease-in  hover:bg-[#3586BD]
+                      "
+                      >
+                        <span className="w-full hover:text-green-500 ">
+                          Whats
+                        </span>{" "}
+                        app
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -145,11 +181,12 @@ export function About(props: any) {
         </section>
 
         <section
+          ref={props.referenceConhecimentos}
           className=" flex h-[320px] w-[1440px] flex-col items-center justify-center  
       gap-12 text-5xl font-bold   "
         >
           <div>
-            <h1 className=" text-5xl font-bold"> Conhecimentos</h1>
+            <h1 className="mt-20 text-5xl font-bold"> Conhecimentos</h1>
           </div>
           <div>
             <ul className=" flex w-full  flex-row justify-center gap-20  ">
@@ -171,8 +208,9 @@ export function About(props: any) {
             </ul>
           </div>
         </section>
-
-        <Projects />
+        <div ref={props.referenceProjetos}>
+          <Projects />
+        </div>
 
         {/* <footer className=" w-ful flex flex-col items-center justify-between bg-gray-500">
           <div className=" text-5xl font-bold">
