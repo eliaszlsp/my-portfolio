@@ -4,6 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Projects from "./projects";
 import { useEffect } from "react";
+import Lottie from "lottie-react";
+import computador from "../../public/animation/coding.json";
+import about from "../../public/animation/about.json";
 
 export function About(props: any) {
   const handleClick = ({ projetos }: any) => {
@@ -29,6 +32,7 @@ export function About(props: any) {
     });
   }, []);
   // icones baixados do icons8
+
   return (
     <div>
       <main
@@ -78,12 +82,10 @@ export function About(props: any) {
             </div>
 
             <div data-aos="zoom-in" data-aos-delay="150">
-              <Image
-                className=" inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
-                src="/codetyping-bro.svg"
-                alt="imagem aleatoria"
-                width={300}
-                height={300}
+              <Lottie
+                animationData={computador}
+                loop={true}
+                className="h-[500px] w-[500px]"
               />
             </div>
           </div>
@@ -135,11 +137,14 @@ export function About(props: any) {
                       <a
                         target="_blank"
                         href="https://www.linkedin.com/in/eliaslopes1/"
-                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                        className="group flex w-fit flex-row  items-center rounded-md border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                       transition-all delay-100 ease-in  hover:bg-[#3586BD]
                       "
                       >
-                        <span className="hover:text-[#0072bb]">Linked</span>in
+                        <span className="group-hover:text-[#0072bb]">
+                          Linked
+                        </span>
+                        in
                       </a>
                       <a
                         target="_blank"
@@ -153,11 +158,11 @@ export function About(props: any) {
                       <a
                         href="https://wa.link/9n4ge3"
                         target="_blank"
-                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                        className="group flex w-fit flex-row  items-center rounded-md border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                       transition-all delay-100 ease-in  hover:bg-[#3586BD]
                       "
                       >
-                        <span className="w-full hover:text-green-500 ">
+                        <span className="w-full group-hover:text-green-500 ">
                           Whats
                         </span>{" "}
                         app
@@ -167,14 +172,12 @@ export function About(props: any) {
                 </div>
               </div>
 
-              <div data-aos="zoom-in" data-aos-delay="300">
-                <Image
-                  className="  "
-                  src="/codetyping-bro.svg"
-                  alt="imagem aleatoria"
-                  width={300}
-                  height={300}
-                />
+              <div
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                className="h-[500px] w-[500px]"
+              >
+                <Lottie animationData={about} loop={true} />
               </div>
             </div>
           </div>
