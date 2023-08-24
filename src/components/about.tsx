@@ -69,7 +69,7 @@ export function About(props: any) {
               </div>
               <div data-aos="zoom-in" data-aos-delay="75">
                 <button
-                  className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                  className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                    transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
                   onClick={() => {
                     handleClick({ projetos: "projetos" });
@@ -137,7 +137,7 @@ export function About(props: any) {
                       <a
                         target="_blank"
                         href="https://www.linkedin.com/in/eliaslopes1/"
-                        className="group flex w-fit flex-row  items-center rounded-md border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                        className="group flex w-fit flex-row  items-center rounded-md border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                       transition-all delay-100 ease-in  hover:bg-[#3586BD]
                       "
                       >
@@ -149,7 +149,7 @@ export function About(props: any) {
                       <a
                         target="_blank"
                         href="https://www.instagram.com/elias_lopessp/"
-                        className="flex w-fit flex-row items-center  rounded-md  border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                        className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                       transition-all delay-100 ease-in  hover:bg-[#3586BD]
                       "
                       >
@@ -158,7 +158,7 @@ export function About(props: any) {
                       <a
                         href="https://wa.link/9n4ge3"
                         target="_blank"
-                        className="group flex w-fit flex-row  items-center rounded-md border-2 border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                        className="group flex w-fit flex-row  items-center rounded-md border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                       transition-all delay-100 ease-in  hover:bg-[#3586BD]
                       "
                       >
