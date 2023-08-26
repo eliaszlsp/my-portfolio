@@ -20,6 +20,7 @@ export function About(props: any) {
     "javascripticon",
     "giticon",
     "reacticon",
+    "nextjsicon",
     "tailwindcssicon",
     "graphqlicon",
     "nodejsicon",
@@ -36,10 +37,10 @@ export function About(props: any) {
   return (
     <div>
       <main
-        className="  mt-14  flex h-max w-screen flex-col 
-     items-center justify-around gap-y-5 text-white  "
+        className="  flex   h-max w-screen flex-col items-center 
+     justify-around gap-y-5 text-white sm:mt-14  "
       >
-        <section className=" flex w-[1440px] flex-col items-center  justify-between">
+        <section className=" flex h-full w-[1440px] flex-col items-center justify-between  ">
           <div className="mt-12 flex h-full w-[1440px] flex-row items-center justify-between">
             <div className=" flex flex-col gap-12 ">
               <div
@@ -199,7 +200,7 @@ export function About(props: any) {
                     <Image
                       className="w-[6.25rem]  
                 "
-                      src={`/${nameElement}.svg`}
+                      src={`/icons/${nameElement}.svg`}
                       alt={`${nameElement.replace(/icon$/, "")}`}
                       width={100}
                       height={100}

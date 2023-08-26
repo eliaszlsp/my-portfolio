@@ -100,7 +100,7 @@ export default function Projects() {
                             <div className="w-fit">
                               <Image
                                 className="w-[30px]"
-                                src={`/${nameElement}.svg`}
+                                src={`/icons/${nameElement}.svg`}
                                 alt={`${nameElement.replace(/icon$/, "")}`}
                                 width={100}
                                 height={100}
@@ -183,7 +183,7 @@ export default function Projects() {
                               <div className="w-fit">
                                 <Image
                                   className="w-[30px]"
-                                  src={`/${nameElement}.svg`}
+                                  src={`/icons/${nameElement}.svg`}
                                   alt={`${nameElement.replace(/icon$/, "")}`}
                                   width={100}
                                   height={100}

@@ -1,9 +1,14 @@
-"use client";
-
+import Hamburger from "hamburger-react";
+import { useEffect, useState } from "react";
 import { Logo } from "./logo";
-// teste o f2 para renonear variavelz
 
-export function Header(props: any) {
+export function HeaderResponsive(props: any) {
+  const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    isOpen
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
+  });
   const ref = {
     sobre: props.referenceSobre,
     projetos: props.referenceProjetos,
@@ -25,52 +30,71 @@ export function Header(props: any) {
       ? ref.contatos.current?.scrollIntoView({ behavior: "smooth" })
       : "";
   };
+
   return (
-    <header className="fixed top-0 z-10  flex h-16 w-screen flex-row justify-center border-b-[.0313rem] border-[#183E57] bg-[#1F4F6F] ">
-      <div className="flex w-[90rem]  flex-row items-center justify-between">
-        <div className="   left-4 ">
-          <Logo />
+    <div
+      className={`fixed top-0 z-10 flex w-screen flex-col justify-between  bg-[#1F4F6F]  ${
+        isOpen && " h-screen"
+      }   `}
+    >
+      <div className=" min-w-screen flex flex-row justify-between ">
+        <Logo />
+        <div>
+          <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            duration={0.4}
+            distance="md"
+            easing="ease-in"
+            color="#ffffff"
+          />
         </div>
-        <div className="flex justify-center ">
-          <nav className="flex ">
-            <ul className="flex flex-row gap-12 text-2xl font-bold text-white ">
+      </div>
+      <div className={`${!isOpen && " hidden "}   h-full`}>
+        <div className="flex  ">
+          <nav className=" flex w-full items-center ">
+            <ul className="flex flex-col items-center justify-center gap-12 text-2xl font-bold text-white ">
               {" "}
               {/*  clicar e levar para parte da tela  */}
-              <li className="opacity-80 hover:opacity-100">
+              <li className="flex h-32 w-screen  items-center border-y border-[#183E57]  pt-5 opacity-80 hover:opacity-100">
                 <a
                   onClick={() => {
                     handleClick({ sobre: "sobre" });
+                    setOpen(false);
                   }}
                   href="#sobre"
                 >
                   Sobre mim
                 </a>
               </li>
-              <li className="opacity-80 hover:opacity-100">
+              <li className=" flex w-screen  opacity-80  hover:opacity-100">
                 <a
                   href="#conhecimentos"
                   onClick={() => {
                     handleClick({ conhecimentos: "conhecimentos" });
+                    setOpen(false);
                   }}
                 >
                   {" "}
                   Conhecimentos
                 </a>
               </li>
-              <li className="opacity-80 hover:opacity-100">
+              <li className="flex  h-32 w-screen items-center border border-[#183E57]  opacity-80  hover:opacity-100">
                 <a
                   onClick={() => {
                     handleClick({ projetos: "projetos" });
+                    setOpen(false);
                   }}
                   href="#projetos"
                 >
                   Projetos
                 </a>
               </li>
-              <li className="opacity-80 hover:opacity-100">
+              <li className="w-screen   opacity-80  hover:opacity-100">
                 <a
                   onClick={() => {
                     handleClick({ contatos: "contatos" });
+                    setOpen(false);
                   }}
                   href="#contato"
                 >
@@ -81,6 +105,6 @@ export function Header(props: any) {
           </nav>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
