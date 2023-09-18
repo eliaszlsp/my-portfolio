@@ -38,15 +38,15 @@ export function About(props: any) {
     <div>
       <main
         className="  flex   h-max w-screen flex-col items-center 
-     justify-around gap-y-5 text-white sm:mt-14  "
+     justify-around gap-y-5 text-white max-sm:w-screen max-sm:overflow-hidden  sm:mt-14 "
       >
-        <section className=" flex h-full w-[1440px] flex-col items-center justify-between  ">
-          <div className="mt-12 flex h-full w-[1440px] flex-row items-center justify-between">
+        <section className=" flex h-full w-[1440px] flex-col items-center justify-between max-sm:w-screen  ">
+          <div className="mt-12 flex h-full w-[1440px] flex-row items-center  justify-between  max-sm:w-screen   max-sm:justify-center">
             <div className=" flex flex-col gap-12 ">
               <div
                 data-aos="zoom-in"
                 data-aos-delay="50"
-                className=" flex flex-col items-center justify-center   "
+                className=" flex flex-col items-center justify-center max-sm:w-screen   "
               >
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
@@ -55,7 +55,7 @@ export function About(props: any) {
                   </span>
                 </h1>
                 <br />
-                <p className="  w-[700px] text-white   ">
+                <p className="  text-white sm:w-[700px]   ">
                   {" "}
                   Eu sou um
                   <span className="  text-lg font-bold text-[#1d247d]">
@@ -82,32 +82,39 @@ export function About(props: any) {
               </div>
             </div>
 
-            <div data-aos="zoom-in" data-aos-delay="150">
+            <div
+              className=" max-sm:hidden"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
               <Lottie
                 animationData={computador}
                 loop={true}
-                className="h-[500px] w-[500px]"
+                className="h-[500px] w-[500px] "
               />
             </div>
           </div>
         </section>
 
-        <section ref={props.referenceSobre} className=" w-[1440px flex">
-          <div className="flex h-[800px] w-[1440px] flex-col  justify-evenly  gap-5">
+        <section
+          ref={props.referenceSobre}
+          className="  w-[1440px  flex max-sm:w-screen"
+        >
+          <div className="flex h-[800px] flex-col justify-evenly  gap-5  sm:w-[1440px]">
             <div
               data-aos="zoom-in"
               data-aos-delay="200"
-              className=" self-center text-5xl font-bold"
+              className=" self-center text-5xl  font-bold max-sm:text-3xl"
             >
               <h1> Sobre mim </h1>
             </div>
 
-            <div className="center flex flex-row justify-between">
+            <div className="center flex flex-row justify-between max-sm:justify-center  ">
               <div data-aos="zoom-in" data-aos-delay="250">
                 <div className="  ">
                   <h1 className="flex self-start text-center text-6xl   font-thin"></h1>
                   <br />
-                  <div className=" flex w-[700px] flex-col gap-3">
+                  <div className=" flex w-[700px] flex-col gap-3  max-sm:w-screen">
                     <p className="mb-2">
                       Olá! Eu sou o Elias Lopes, alguém que recentemente
                       descobriu a área de desenvolvimento de software. Isso
@@ -134,7 +141,7 @@ export function About(props: any) {
                       Quer conhecer mais da minha história e do meu trabalho?
                       Entre em contato comigo através deste{" "}
                     </p>
-                    <div className=" flex flex-row gap-4">
+                    <div className=" flex flex-row gap-4 max-sm:flex-col">
                       <a
                         target="_blank"
                         href="https://www.linkedin.com/in/eliaslopes1/"
@@ -176,7 +183,7 @@ export function About(props: any) {
               <div
                 data-aos="zoom-in"
                 data-aos-delay="300"
-                className="h-[500px] w-[500px]"
+                className="h-[500px] w-[500px] max-sm:hidden"
               >
                 <Lottie animationData={about} loop={true} />
               </div>
@@ -186,19 +193,25 @@ export function About(props: any) {
 
         <section
           ref={props.referenceConhecimentos}
-          className=" flex h-[320px] w-[1440px] flex-col items-center justify-center  
-      gap-12 text-5xl font-bold   "
+          className=" flex w-[1440px] flex-col  items-center justify-center gap-12 text-5xl  
+      font-bold max-sm:w-screen sm:h-[320px]    "
         >
           <div>
-            <h1 className="mt-20 text-5xl font-bold"> Conhecimentos</h1>
+            <h1 className="mt-20 text-5xl font-bold max-sm:text-3xl">
+              {" "}
+              Conhecimentos
+            </h1>
           </div>
-          <div>
-            <ul className=" flex w-full  flex-row justify-center gap-20  ">
+          <div className="  flex items-center justify-center max-sm:h-full  max-sm:w-full ">
+            <ul className=" max-sm:flex max-sm:gap-3  sm:flex  sm:w-full  sm:flex-row   sm:items-center   sm:justify-center  sm:gap-20">
               {photosElements.map((nameElement, index) => (
-                <li className=" text-center text-sm uppercase" key={index}>
+                <li
+                  className="flex flex-col items-center justify-center text-center text-[5px] uppercase max-sm:w-full  sm:text-sm"
+                  key={index}
+                >
                   <div className="w-fit">
                     <Image
-                      className="w-[6.25rem]  
+                      className="w-[6.25rem]  max-sm:w-7
                 "
                       src={`/icons/${nameElement}.svg`}
                       alt={`${nameElement.replace(/icon$/, "")}`}
@@ -215,46 +228,6 @@ export function About(props: any) {
         <div ref={props.referenceProjetos}>
           <Projects />
         </div>
-
-        {/* <footer className=" w-ful flex flex-col items-center justify-between bg-gray-500">
-          <div className=" text-5xl font-bold">
-            <h1> Contato</h1>
-          </div>
-          <div className="flex w-[1440px] flex-row items-center  justify-between">
-            <div>
-              <div className="slide-in-blurred-left   ">
-                <h1 className="text-center text-2xl  font-bold">
-                  Frontend Developer
-                </h1>
-                <br />
-                <p className=" w-96 text-white ">
-                  Olá! Meu nome é Elias. Sou um[a] [Profissão] apaixonado[a] por
-                  [Área de Atuação]. Com [X] anos de experiência, desenvolvi{" "}
-                  <br />
-                  habilidades sólidas em [Habilidades Principais],
-                  <br />
-                  sempre buscando aprimorar meus conhecimentos e acompanhar as
-                  tendências do mercado. Ao longo da minha carreira, tive a
-                  oportunidade de trabalhar em diversos projetos desafiadores,{" "}
-                  <br />
-                  desde [Tipo de Projeto] até [Outro Tipo de Projeto]. Essas
-                  experiências me permitiram adquirir uma compreensão profunda
-                  de
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <Image
-                className=" inline-block  rounded-full  border-white bg-gradient-to-r from-blue-400 to-gray-900 p-1 text-indigo-900 "
-                src="/codetyping-bro.svg"
-                alt="imagem aleatoria"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </footer> */}
       </main>
     </div>
   );
