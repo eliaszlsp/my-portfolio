@@ -2,7 +2,7 @@
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Projects from "./projects";
+import Projects from "./projects/projects";
 import { useEffect } from "react";
 import Lottie from "lottie-react";
 import computador from "../../public/animation/coding.json";
