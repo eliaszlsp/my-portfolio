@@ -39,15 +39,15 @@ export function About(props: any) {
     <div className=" flex justify-center">
       <main
         className="  flex   h-max  flex-col items-center 
-     justify-around gap-y-5 text-white max-md:max-w-[90vw]  max-md:overflow-hidden  sm:mt-14 "
+     justify-around gap-y-5 text-white max-lg:max-w-[90vw]  max-lg:overflow-hidden  sm:mt-14 "
       >
-        <section className=" flex h-full w-[1440px] flex-col items-center justify-between  max-md:w-full">
-          <div className="mt-24 flex h-full w-[1440px] flex-row items-center justify-between px-4  max-md:w-full   max-md:justify-center">
-            <div className=" flex flex-col gap-12 max-md:w-full  ">
+        <section className=" flex h-full w-[1440px] flex-col items-center justify-between  max-lg:w-full">
+          <div className="mt-24 flex h-full w-[1440px] flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
+            <div className=" flex flex-col gap-12 max-lg:w-full  ">
               <div
                 data-aos="zoom-in"
                 data-aos-delay="50"
-                className=" flex flex-col items-center justify-center max-md:w-full"
+                className=" flex flex-col items-center justify-center max-lg:w-full"
               >
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
@@ -84,7 +84,7 @@ export function About(props: any) {
             </div>
 
             <div
-              className=" max-md:hidden"
+              className=" max-lg:hidden"
               data-aos="zoom-in"
               data-aos-delay="150"
             >
@@ -99,24 +99,24 @@ export function About(props: any) {
 
         <section
           ref={props.referenceSobre}
-          className="  w-[1440px  flex max-md:w-full"
+          className="  w-[1440px  flex max-lg:w-full"
         >
-          <div className="flex h-[800px]  w-[1440px]  flex-col items-center justify-evenly gap-5  px-4 max-md:h-full  max-md:w-full">
+          <div className="flex h-[800px]  w-[1440px]  flex-col items-center justify-evenly gap-5  px-4 max-lg:h-full  max-lg:w-full">
             <div
               data-aos="zoom-in"
               data-aos-delay="200"
-              className=" self-center text-5xl  font-bold max-md:mt-10 max-md:text-3xl max-md:font-black"
+              className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black"
             >
               <h1> Sobre mim </h1>
             </div>
 
-            <div className="center flex flex-row justify-between max-md:justify-center  ">
+            <div className="center flex flex-row justify-between max-lg:justify-center  ">
               <div data-aos="zoom-in" data-aos-delay="250">
                 <div className="  ">
                   <h1 className="flex self-start text-center text-6xl   font-thin"></h1>
                   <br />
-                  <div className=" flex w-[700px]  flex-col justify-center gap-3  max-md:w-full">
-                    <div className=" flex flex-col items-center justify-center max-md:w-fit">
+                  <div className=" flex w-[700px]  flex-col justify-center gap-3  max-lg:w-full">
+                    <div className=" flex flex-col items-center justify-center max-lg:w-fit">
                       <p className="mb-2">
                         Olá! Eu sou o Elias Lopes, alguém que recentemente
                         descobriu a área de desenvolvimento de software. Isso
@@ -144,12 +144,12 @@ export function About(props: any) {
                         Entre em contato comigo através deste{" "}
                       </p>
                     </div>
-                    <div className=" flex flex-row gap-4 max-md:flex-row  ">
+                    <div className=" flex flex-row gap-4 max-lg:flex-row  ">
                       <a
                         target="_blank"
                         href="https://www.linkedin.com/in/eliaslopes1/"
                         className="group flex  w-36 flex-row  items-center justify-center  rounded-md border border-[#47B4FC] px-4  py-2 text-2xl font-semibold transition-all delay-100 
-                      ease-in hover:bg-[#3586BD] max-md:w-20   max-md:text-sm
+                      ease-in hover:bg-[#3586BD] max-lg:w-20   max-lg:text-sm
                       "
                       >
                         <span className="group-hover:text-[#0072bb]">
@@ -161,7 +161,7 @@ export function About(props: any) {
                         target="_blank"
                         href="https://www.instagram.com/elias_lopessp/"
                         className="flex w-36 flex-row items-center justify-center  rounded-md border border-[#47B4FC] px-4 py-2 text-2xl font-semibold transition-all delay-100 
-                      ease-in hover:bg-[#3586BD] max-md:w-20   max-md:text-sm
+                      ease-in hover:bg-[#3586BD] max-lg:w-20   max-lg:text-sm
                       "
                       >
                         <span> Instagram </span>
@@ -170,7 +170,7 @@ export function About(props: any) {
                         href="https://wa.link/9n4ge3"
                         target="_blank"
                         className="group flex w-36 flex-row  items-center justify-center rounded-md border border-[#47B4FC] px-4 py-2 text-2xl font-semibold transition-all delay-100 
-                      ease-in hover:bg-[#3586BD] max-md:w-20   max-md:text-sm
+                      ease-in hover:bg-[#3586BD] max-lg:w-20   max-lg:text-sm
                       "
                       >
                         <span className=" group-hover:text-green-500 ">
@@ -186,7 +186,7 @@ export function About(props: any) {
               <div
                 data-aos="zoom-in"
                 data-aos-delay="300"
-                className="h-[500px] w-[500px] max-md:hidden"
+                className="h-[500px] w-[500px] max-lg:hidden"
               >
                 <Lottie animationData={about} loop={true} />
               </div>
@@ -197,25 +197,25 @@ export function About(props: any) {
         <section
           ref={props.referenceConhecimentos}
           className=" flex w-[1440px] flex-col  items-center justify-center gap-12 text-5xl  
-      font-bold max-md:w-full sm:h-[320px]    "
+      font-bold max-lg:w-full sm:h-[320px]    "
         >
           <div>
-            <h1 className="mt-20 text-5xl font-bold max-md:mt-10 max-md:text-3xl max-md:font-black">
+            <h1 className="mt-20 text-5xl font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
               {" "}
               Conhecimentos
             </h1>
           </div>
-          <div className="  flex items-center justify-center max-md:h-full  max-md:w-full ">
-            <ul className="  flex  w-full  flex-row items-center  justify-center   gap-20   max-md:grid   max-md:grid-cols-3  max-md:gap-3">
+          <div className="  flex items-center justify-center max-lg:h-full  max-lg:w-full ">
+            <ul className="  flex  w-full  flex-row items-center  justify-center   gap-20   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
               {photosElements.map((nameElement, index) => {
                 return (
                   <li
-                    className="flex  flex-col items-center justify-center text-center text-sm uppercase max-md:w-full  sm:text-[10px]"
+                    className="flex  flex-col items-center justify-center text-center text-sm uppercase max-lg:w-full  sm:text-[10px]"
                     key={index}
                   >
                     <div className="w-fit">
                       <Image
-                        className="w-[6.25rem]  max-md:w-7
+                        className="w-[6.25rem]  max-lg:w-7
                 "
                         src={`/icons/${nameElement}.svg`}
                         alt={`${nameElement.replace(/icon$/, "")}`}

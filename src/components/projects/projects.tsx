@@ -25,11 +25,11 @@ export default function Projects() {
 
   return (
     <div>
-      <section className=" flex h-[1300px] w-[1440px] flex-col   items-center py-40  max-md:w-screen max-md:py-20">
+      <section className=" flex h-[1300px] w-[1440px] flex-col   items-center py-40  max-lg:w-screen max-lg:py-20">
         <div className=" mb-12 px-4 text-5xl font-bold">
           <h1>Projetos</h1>
         </div>
-        <div className=" flex flex-row gap-3  max-md:w-full max-md:flex-col max-md:justify-center  max-md:gap-8">
+        <div className=" flex flex-row gap-3  max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:gap-8 max-md:flex-col">
           {projetos.map((item) => {
             return <CardDefault key={item.id} project={item} />;
           })}
@@ -41,10 +41,10 @@ export default function Projects() {
 
 {
   /* <div className=" flex sm:max-h-[560px]  ">
-<div className="flex  w-[1440px] gap-12 leading-loose max-md:flex-col max-md:items-center max-md:justify-center ">
-  <div className=" flex w-[400px]  flex-col items-center  rounded-2xl bg-[#1d247d] transition-all delay-100 ease-out  hover:shadow-[-2px_-1px_19px_10px_rgba(71,180,252,0.75)]  max-md:w-screen">
+<div className="flex  w-[1440px] gap-12 leading-loose max-lg:flex-col max-lg:items-center max-lg:justify-center ">
+  <div className=" flex w-[400px]  flex-col items-center  rounded-2xl bg-[#1d247d] transition-all delay-100 ease-out  hover:shadow-[-2px_-1px_19px_10px_rgba(71,180,252,0.75)]  max-lg:w-screen">
     {" "}
-    <div className=" w-full bg-black max-md:hidden   ">
+    <div className=" w-full bg-black max-lg:hidden   ">
       <ReactPlayer
         url="/rocketseatvideo.mp4"
         height={"200px"}
@@ -142,9 +142,9 @@ export default function Projects() {
       </div>
     </div>
   </div>
-  <div className=" flex h-[568px]      w-[400px]  flex-col  items-center rounded-2xl bg-[#1d247d]  transition-all delay-100   ease-out hover:shadow-[-2px_-1px_19px_10px_rgba(71,180,252,0.75)]  max-md:h-[300px]  max-md:w-screen">
+  <div className=" flex h-[568px]      w-[400px]  flex-col  items-center rounded-2xl bg-[#1d247d]  transition-all delay-100   ease-out hover:shadow-[-2px_-1px_19px_10px_rgba(71,180,252,0.75)]  max-lg:h-[300px]  max-lg:w-screen">
     <div className="h-full">
-      <div className=" w-full bg-black  max-md:hidden">
+      <div className=" w-full bg-black  max-lg:hidden">
         <ReactPlayer
           url="/rickmorty.mp4"
           height={"200px"}
@@ -154,7 +154,7 @@ export default function Projects() {
         />
       </div>
 
-      <div className="flex  h-[366px]  flex-col justify-between p-4 max-md:h-[200px] ">
+      <div className="flex  h-[366px]  flex-col justify-between p-4 max-lg:h-[200px] ">
         <div>
           <h1 className="mb-4 text-center text-xl  font-bold">
             Api Rick&Morty
