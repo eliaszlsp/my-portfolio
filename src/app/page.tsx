@@ -23,7 +23,7 @@ export default function Home() {
             referenceContatos={ref.contatos}
           />
         </div>
-        <div className="sm:hidden">
+        <div className="lg:hidden">
           <HeaderResponsive
             referenceSobre={ref.sobre}
             referenceProjetos={ref.projetos}

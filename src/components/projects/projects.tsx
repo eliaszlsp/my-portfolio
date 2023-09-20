@@ -29,7 +29,7 @@ export default function Projects() {
         <div className=" mb-12 px-4 text-5xl font-bold">
           <h1>Projetos</h1>
         </div>
-        <div className=" flex flex-row gap-3  max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:gap-8 max-md:flex-col">
+        <div className=" flex flex-row gap-3  max-lg:w-full max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-8">
           {projetos.map((item) => {
             return <CardDefault key={item.id} project={item} />;
           })}
