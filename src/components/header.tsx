@@ -1,15 +1,32 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Logo } from "./logo";
 // teste o f2 para renonear variavelz
 
 export function Header(props: any) {
+  const [positionScroll, setPositionScroll] = useState(false);
   const ref = {
     sobre: props.referenceSobre,
     projetos: props.referenceProjetos,
     conhecimentos: props.referenceConhecimentos,
     contatos: props.referenceContatos,
   };
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > 5) {
+      setPositionScroll(true);
+    } else {
+      setPositionScroll(false);
+    }
+
+    // Faça algo com a posição do scroll, se necessário
+    console.log(scrollTop);
+  };
+  window.addEventListener("scroll", handleScroll);
+  useEffect(() => {}, []);
 
   const handleClick = ({ sobre, projetos, conhecimentos, contatos }: any) => {
     sobre === "sobre"
@@ -26,8 +43,14 @@ export function Header(props: any) {
       : "";
   };
   return (
-    <header className="fixed top-0 z-10  flex h-16 w-screen flex-row justify-center border-b-[.0313rem] border-[#183E57] bg-[#1F4F6F] ">
-      <div className="flex w-[90rem]  flex-row items-center justify-between">
+    <header
+      className={`elemento-com-transicao fixed top-0  z-10 flex h-16 w-screen flex-row justify-center ${
+        positionScroll
+          ? " border-b-[.0313rem] border-[#183E57] bg-[#1F4F6F] "
+          : " bg-gradient-to-r  from-[#35868d]  to-[#1F4F6F]"
+      }  `}
+    >
+      <div className="flex w-full flex-row  items-center justify-between px-6">
         <div className="   left-4 ">
           <Logo />
         </div>

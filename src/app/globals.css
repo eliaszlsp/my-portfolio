@@ -1,4 +1,19 @@
 @tailwind base;
+*::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background: #1f4f6f;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 0;
+  scrollbar-width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -44,5 +59,9 @@
 
   .ReactCollapse--collapse {
     transition: height 500ms;
+  }
+  .elemento-com-transicao {
+    transition: background-color cubic-bezier(0.46, 0.03, 0.52, 0.96)
+      ease-in-out 100ms;
   }
 }

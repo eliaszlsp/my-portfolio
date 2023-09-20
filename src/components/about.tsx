@@ -38,11 +38,11 @@ export function About(props: any) {
   return (
     <div className=" flex justify-center">
       <main
-        className="  flex   h-max  flex-col items-center 
-     justify-around gap-y-5 text-white max-lg:max-w-[90vw]  max-lg:overflow-hidden  sm:mt-14 "
+        className="  flex   h-max  w-full flex-col 
+     items-center justify-around gap-y-5 text-white max-lg:max-w-[90vw] max-lg:overflow-hidden  lg:mt-14 "
       >
-        <section className=" flex h-full w-[1440px] flex-col items-center justify-between  max-lg:w-full">
-          <div className="mt-24 flex h-full w-[1440px] flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
+        <section className=" flex h-full  flex-col items-center justify-evenly   max-lg:w-full">
+          <div className="mt-24 flex h-full w-full flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
             <div className=" flex flex-col gap-12 max-lg:w-full  ">
               <div
                 data-aos="zoom-in"
@@ -56,7 +56,7 @@ export function About(props: any) {
                   </span>
                 </h1>
                 <br />
-                <p className="  text-white sm:w-[700px]   ">
+                <p className="  text-white lg:w-[700px]   ">
                   {" "}
                   Eu sou um
                   <span className="  text- text-lg font-bold">
@@ -99,7 +99,7 @@ export function About(props: any) {
 
         <section
           ref={props.referenceSobre}
-          className="  w-[1440px  flex max-lg:w-full"
+          className="   flex  justify-evenly max-lg:w-full"
         >
           <div className="flex h-[800px]  w-[1440px]  flex-col items-center justify-evenly gap-5  px-4 max-lg:h-full  max-lg:w-full">
             <div

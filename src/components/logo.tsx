@@ -26,7 +26,7 @@ export function Logo() {
         <Laptop size={48} color="#ffffff" />
         <div className="leading-none">
           <p className="font-bold text-white">Elias Lopes</p>
-          <p className="font-serif text-[#47B4FC]  ">Front-end Developer</p>
+          <p className="font-serif text-[#47B4FC]  "> Full-stack Developer</p>
         </div>
       </div>
     </div>
