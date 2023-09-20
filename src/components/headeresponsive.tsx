@@ -53,10 +53,10 @@ export function HeaderResponsive(props: any) {
       <div className={`${!isOpen && " hidden "}   h-full`}>
         <div className="flex  ">
           <nav className=" flex w-full items-center ">
-            <ul className="flex flex-col items-center justify-center gap-12 text-2xl font-bold text-white ">
+            <ul className="ml-3 flex flex-col items-center justify-center gap-12 text-2xl font-bold text-white ">
               {" "}
               {/*  clicar e levar para parte da tela  */}
-              <li className="flex h-32 w-screen  items-center border-y border-[#183E57]  pt-5 opacity-80 hover:opacity-100">
+              <li className=" flex h-32  w-screen items-center border-y border-[#183E57]  pt-5 opacity-80 hover:opacity-100">
                 <a
                   onClick={() => {
                     handleClick({ sobre: "sobre" });
@@ -79,7 +79,7 @@ export function HeaderResponsive(props: any) {
                   Conhecimentos
                 </a>
               </li>
-              <li className="flex  h-32 w-screen items-center border border-[#183E57]  opacity-80  hover:opacity-100">
+              <li className="flex  h-32 w-screen items-center border-y border-[#183E57]  opacity-80  hover:opacity-100">
                 <a
                   onClick={() => {
                     handleClick({ projetos: "projetos" });
