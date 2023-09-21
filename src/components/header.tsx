@@ -25,8 +25,17 @@ export function Header(props: any) {
     // Faça algo com a posição do scroll, se necessário
     console.log(scrollTop);
   };
-  window.addEventListener("scroll", handleScroll);
-  useEffect(() => {}, []);
+ 
+  useEffect(() => {
+ window.addEventListener("scroll", handleScroll);
+  
+  // Lembre-se de remover o evento na limpeza
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+
+    
+  }, []);
 
   const handleClick = ({ sobre, projetos, conhecimentos, contatos }: any) => {
     sobre === "sobre"
