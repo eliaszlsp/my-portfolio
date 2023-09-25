@@ -25,14 +25,16 @@ export default function Projects() {
 
   return (
     <div>
-      <section className=" flex h-[1300px] w-screen flex-col  items-center py-40  max-lg:w-screen max-lg:py-20">
-        <div className=" mb-12 px-4 text-5xl font-bold">
-          <h1>Projetos</h1>
-        </div>
-        <div className=" flex flex-row gap-3  max-lg:w-full  max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-8 lg:justify-evenly">
-          {projetos.map((item) => {
-            return <CardDefault key={item.id} project={item} />;
-          })}
+      <section className=" flex  w-screen items-center justify-center   py-40 ">
+        <div className="flex    w-[1440px] flex-col items-center  max-lg:w-screen max-lg:py-20 ">
+          <div className=" mb-12 px-4 text-5xl font-bold">
+            <h1>Projetos</h1>
+          </div>
+          <div className=" flex min-w-full flex-row justify-between max-lg:w-full  max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-8 ">
+            {projetos.map((item) => {
+              return <CardDefault key={item.id} project={item} />;
+            })}
+          </div>
         </div>
       </section>
     </div>

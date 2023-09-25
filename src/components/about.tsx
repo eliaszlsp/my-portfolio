@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import Projects from "./projects/projects";
-import { useEffect } from "react";
+
 import Lottie from "lottie-react";
 import computador from "../../public/animation/coding.json";
 import about from "../../public/animation/about.json";
@@ -26,29 +25,18 @@ export function About(props: any) {
     "nodejsicon",
   ];
 
-  useEffect(() => {
-    AOS.init({
-      initClassName: "aos-init",
-      animatedClassName: "aos-animate",
-      mirror: false,
-    });
-  }, []);
   // icones baixados do icons8
 
   return (
     <div className=" flex justify-center">
       <main
-        className="  flex   h-max  w-full flex-col 
+        className="  flex   h-max  min-w-full flex-col 
      items-center justify-around gap-y-5 text-white max-lg:max-w-[90vw] max-lg:overflow-hidden  lg:mt-14 "
       >
-        <section className=" flex h-full  flex-col items-center justify-evenly   max-lg:w-full">
-          <div className="mt-24 flex h-full w-full flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
-            <div className=" flex flex-col gap-12 max-lg:w-full  ">
-              <div
-                data-aos="zoom-in"
-                data-aos-delay="50"
-                className=" flex flex-col items-center justify-center max-lg:w-full"
-              >
+        <section className=" flex h-full  w-full flex-col items-center  justify-between max-lg:w-full">
+          <div className="mt-24 flex h-full  w-[1440px]  flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
+            <div className=" flex flex-col gap-12 max-lg:w-full">
+              <div className=" flex flex-col items-center justify-center max-lg:w-full">
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
                   <span className="ml-44  text-3xl font-black text-white">
@@ -59,9 +47,9 @@ export function About(props: any) {
                 <p className="  text-white lg:w-[700px]   ">
                   {" "}
                   Eu sou um
-                  <span className="  text- text-lg font-bold">
+                  <span className="  text-lg font-bold text-white">
                     {" "}
-                    Desenvolvedor Front-end ,
+                    Desenvolvedor Full-stack ,
                   </span>{" "}
                   apaixonado por tecnologia e inovação. <br />
                   Neste portfólio, você encontrará uma coleção de projetos que
@@ -69,7 +57,7 @@ export function About(props: any) {
                   Gostaria de explorar? Segue o link logo abaixo.
                 </p>
               </div>
-              <div data-aos="zoom-in" data-aos-delay="75">
+              <div>
                 <button
                   className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                    transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
@@ -83,11 +71,7 @@ export function About(props: any) {
               </div>
             </div>
 
-            <div
-              className=" max-lg:hidden"
-              data-aos="zoom-in"
-              data-aos-delay="150"
-            >
+            <div className=" max-lg:hidden">
               <Lottie
                 animationData={computador}
                 loop={true}
@@ -102,16 +86,12 @@ export function About(props: any) {
           className="   flex  justify-evenly max-lg:w-full"
         >
           <div className="flex h-[800px]  w-[1440px]  flex-col items-center justify-evenly gap-5  px-4 max-lg:h-full  max-lg:w-full">
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="200"
-              className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black"
-            >
+            <div className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
               <h1> Sobre mim </h1>
             </div>
 
-            <div className="center flex flex-row justify-between max-lg:justify-center  ">
-              <div data-aos="zoom-in" data-aos-delay="250">
+            <div className="center flex w-full flex-row justify-between max-lg:justify-center  ">
+              <div>
                 <div className="  ">
                   <h1 className="flex self-start text-center text-6xl   font-thin"></h1>
                   <br />
@@ -130,14 +110,27 @@ export function About(props: any) {
                         questionou: &ldquo;Já que você deseja mudar de área, por
                         que não estudar programação?&rdquo; Assim, busquei
                         informações na internet sobre como aprender programação
-                        e acabei me tornando um desenvolvedor web front-end.
+                        e acabei me tornando um desenvolvedor web Full-Stack.
                       </p>
                       <p className="mb-2">
                         Agora, estou apaixonado por criar experiências digitais
                         incríveis e funcionais. Possuo proficiência em{" "}
-                        <span className=" text-[#1d247d]">HTML5 </span>,{" "}
-                        <span className=" text-[#1d247d]">CSS3 </span> e{" "}
-                        <span className=" text-[#1d247d]">Javascript </span>.
+                        <span className=" text-lg font-bold text-white">
+                          HTML5{" "}
+                        </span>
+                        ,{" "}
+                        <span className=" text-lg font-bold text-white">
+                          CSS3{" "}
+                        </span>{" "}
+                        ,
+                        <span className=" text-lg font-bold text-white">
+                          Javascript{" "}
+                        </span>
+                        ,
+                        <span className=" text-lg font-bold text-white">
+                          Node
+                        </span>{" "}
+                        entre outras.
                       </p>
                       <p className="mb-2">
                         Quer conhecer mais da minha história e do meu trabalho?
@@ -183,11 +176,7 @@ export function About(props: any) {
                 </div>
               </div>
 
-              <div
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                className="h-[500px] w-[500px] max-lg:hidden"
-              >
+              <div className="h-[500px] w-[500px] max-lg:hidden">
                 <Lottie animationData={about} loop={true} />
               </div>
             </div>
@@ -196,38 +185,43 @@ export function About(props: any) {
 
         <section
           ref={props.referenceConhecimentos}
-          className=" flex w-[1440px] flex-col  items-center justify-center gap-12 text-5xl  
+          className=" flex w-full flex-col  items-center justify-center  text-5xl  
       font-bold max-lg:w-full sm:h-[320px]    "
         >
-          <div>
-            <h1 className="mt-20 text-5xl font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
-              {" "}
-              Conhecimentos
-            </h1>
-          </div>
-          <div className="  flex items-center justify-center max-lg:h-full  max-lg:w-full ">
-            <ul className="  flex  w-full  flex-row items-center  justify-center   gap-20   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
-              {photosElements.map((nameElement, index) => {
-                return (
-                  <li
-                    className="flex  flex-col items-center justify-center text-center text-sm uppercase max-lg:w-full  sm:text-[10px]"
-                    key={index}
-                  >
-                    <div className="w-fit">
-                      <Image
-                        className="w-[6.25rem]  max-lg:w-7
+          <div
+            className="flex w-[1440px]  flex-col  items-center justify-around text-5xl  
+      font-bold max-lg:w-full sm:h-[320px]"
+          >
+            <div>
+              <h1 className="mt-20 text-5xl font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
+                {" "}
+                Conhecimentos
+              </h1>
+            </div>
+            <div className="  flex min-w-full  items-center justify-center max-lg:h-full  max-lg:w-full ">
+              <ul className="  flex  min-w-full  flex-row items-center     justify-between   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
+                {photosElements.map((nameElement, index) => {
+                  return (
+                    <li
+                      className="flex  flex-col items-center justify-center text-center text-sm uppercase max-lg:w-full  sm:text-[10px]"
+                      key={index}
+                    >
+                      <div className="w-fit">
+                        <Image
+                          className="w-[6.25rem]  max-lg:w-7
                 "
-                        src={`/icons/${nameElement}.svg`}
-                        alt={`${nameElement.replace(/icon$/, "")}`}
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                    <p> {`${nameElement.replace(/icon$/, "")}`} </p>
-                  </li>
-                );
-              })}
-            </ul>
+                          src={`/icons/${nameElement}.svg`}
+                          alt={`${nameElement.replace(/icon$/, "")}`}
+                          width={100}
+                          height={100}
+                        />
+                      </div>
+                      <p> {`${nameElement.replace(/icon$/, "")}`} </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </section>
         <div ref={props.referenceProjetos}>
