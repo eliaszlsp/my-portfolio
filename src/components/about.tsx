@@ -34,7 +34,7 @@ export function About(props: any) {
      items-center justify-around gap-y-5 text-white max-lg:max-w-[90vw] max-lg:overflow-hidden  lg:mt-14 "
       >
         <section className=" flex h-full  w-full flex-col items-center  justify-between max-lg:w-full">
-          <div className="mt-24 flex h-full  w-[1440px]  flex-row items-center justify-between px-4  max-lg:w-full   max-lg:justify-center">
+          <div className="mt-24 flex h-full  w-screen  flex-row items-center justify-between px-4  max-lg:w-full  max-lg:justify-center 2xl:w-[1440px]">
             <div className=" flex flex-col gap-12 max-lg:w-full">
               <div className=" flex flex-col items-center justify-center max-lg:w-full">
                 <h1 className="text-center text-2xl">
@@ -85,7 +85,7 @@ export function About(props: any) {
           ref={props.referenceSobre}
           className="   flex  justify-evenly max-lg:w-full"
         >
-          <div className="flex h-[800px]  w-[1440px]  flex-col items-center justify-evenly gap-5  px-4 max-lg:h-full  max-lg:w-full">
+          <div className="flex h-[800px]  flex-col  items-center justify-evenly gap-5 px-4  max-lg:h-full max-lg:w-full  2xl:w-[1440px]">
             <div className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
               <h1> Sobre mim </h1>
             </div>
@@ -98,23 +98,23 @@ export function About(props: any) {
                   <div className=" flex w-[700px]  flex-col justify-center gap-3  max-lg:w-full">
                     <div className=" flex flex-col items-center justify-center max-lg:w-fit">
                       <p className="mb-2">
-                        Olá! Eu sou o Elias Lopes, alguém que recentemente
-                        descobriu a área de desenvolvimento de software. Isso
-                        aconteceu após eu sentir uma forte vontade de realizar
-                        uma transição de carreira, pois eu estava trabalhando na
-                        área de comunicação como operador de Telemarketing e
-                        recebendo um salário com o qual não estava satisfeito.
+                        Olá! Meu nome é Elias Lopes. Recentemente, descobri a
+                        área de desenvolvimento de software,o que me levou a
+                        fazer uma transição de carreira. <br /> Antes disso, eu
+                        trabalhava na área de comunicação como operador de
+                        telemarketing, mas não estava satisfeito com o salário
+                        que recebia.
                       </p>
                       <p className="mb-2">
-                        Um dia, um amigo meu, que é desenvolvedor, me
-                        questionou: &ldquo;Já que você deseja mudar de área, por
-                        que não estudar programação?&rdquo; Assim, busquei
-                        informações na internet sobre como aprender programação
-                        e acabei me tornando um desenvolvedor web Full-Stack.
+                        Um dia, um amigo meu que é desenvolvedor me perguntou :
+                        &ldquo;Já que você deseja mudar de área, por que não
+                        estudar programação?&rdquo; Foi então que comecei a
+                        pesquisar na internet sobre como aprender programação e
+                        acabei me tornando um desenvolvedor web Full-Stack.
                       </p>
                       <p className="mb-2">
                         Agora, estou apaixonado por criar experiências digitais
-                        incríveis e funcionais. Possuo proficiência em{" "}
+                        incríveis e funcionais. Tenho proficiência em{" "}
                         <span className=" text-lg font-bold text-white">
                           HTML5{" "}
                         </span>
@@ -124,17 +124,21 @@ export function About(props: any) {
                         </span>{" "}
                         ,
                         <span className=" text-lg font-bold text-white">
-                          Javascript{" "}
+                          JAVASCRIPT{" "}
                         </span>
                         ,
                         <span className=" text-lg font-bold text-white">
-                          Node
+                          NODE
                         </span>{" "}
-                        entre outras.
+                        entre outras linguagens e ferramentas.
                       </p>
                       <p className="mb-2">
-                        Quer conhecer mais da minha história e do meu trabalho?
-                        Entre em contato comigo através deste{" "}
+                        Quer saber mais sobre minha história e meu trabalho?
+                        Abaixo, você encontrará três botões que o direcionarão
+                        para minhas redes sociais - WhatsApp, Instagram e
+                        LinkedIn. Sinta-se à vontade para entrar em contato
+                        comigo por qualquer um desses canais.Estou disponível
+                        para conversar quando você quiser!”
                       </p>
                     </div>
                     <div className=" flex flex-row gap-4 max-lg:flex-row  ">
@@ -186,11 +190,11 @@ export function About(props: any) {
         <section
           ref={props.referenceConhecimentos}
           className=" flex w-full flex-col  items-center justify-center  text-5xl  
-      font-bold max-lg:w-full sm:h-[320px]    "
+      font-bold max-lg:w-full"
         >
           <div
-            className="flex w-[1440px]  flex-col  items-center justify-around text-5xl  
-      font-bold max-lg:w-full sm:h-[320px]"
+            className="flex w-full flex-col items-center justify-around gap-10 text-5xl font-bold  
+      max-lg:w-full 2xl:w-[1440px]"
           >
             <div>
               <h1 className="mt-20 text-5xl font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
@@ -198,12 +202,12 @@ export function About(props: any) {
                 Conhecimentos
               </h1>
             </div>
-            <div className="  flex min-w-full  items-center justify-center max-lg:h-full  max-lg:w-full ">
+            <div className="  flex min-w-full  items-center justify-center   max-lg:w-full ">
               <ul className="  flex  min-w-full  flex-row items-center     justify-between   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
                 {photosElements.map((nameElement, index) => {
                   return (
                     <li
-                      className="flex  flex-col items-center justify-center text-center text-sm uppercase max-lg:w-full  sm:text-[10px]"
+                      className="flex  flex-col items-center justify-center text-center text-sm uppercase max-lg:w-full  lg:text-[10px]"
                       key={index}
                     >
                       <div className="w-fit">
