@@ -33,8 +33,8 @@ export function About(props: any) {
         className="  flex   h-max  min-w-full flex-col 
      items-center justify-around gap-y-5 text-white max-lg:max-w-[90vw] max-lg:overflow-hidden  lg:mt-14 "
       >
-        <section className=" flex h-full  w-full flex-col items-center  justify-between max-lg:w-full">
-          <div className="mt-24 flex h-full  w-screen  flex-row items-center justify-between px-4  max-lg:w-full  max-lg:justify-center 2xl:w-[1440px]">
+        <section className=" flex w-full  flex-col items-center justify-between  max-lg:w-full lg:h-screen">
+          <div className="mt-24 flex h-full  w-screen  flex-row items-center justify-between px-4  max-lg:w-full max-lg:justify-center  lg:mt-[-64px] 2xl:w-[1440px]">
             <div className=" flex flex-col gap-12 max-lg:w-full">
               <div className=" flex flex-col items-center justify-center max-lg:w-full">
                 <h1 className="text-center text-2xl">
@@ -83,7 +83,7 @@ export function About(props: any) {
 
         <section
           ref={props.referenceSobre}
-          className="   flex  justify-evenly max-lg:w-full"
+          className="   flex  justify-evenly max-lg:w-full  lg:h-screen"
         >
           <div className="flex h-[800px]  flex-col  items-center justify-evenly gap-5 px-4  max-lg:h-full max-lg:w-full  2xl:w-[1440px]">
             <div className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
