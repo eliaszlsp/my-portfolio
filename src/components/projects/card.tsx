@@ -5,7 +5,7 @@ export function CardDefault({ project }: any) {
     <div className="relative flex w-96 flex-col  justify-center rounded-xl  bg-white bg-clip-border text-gray-700 shadow-md max-md:w-80 max-md:max-w-full max-md:items-center ">
       <div
         className={`${project.color}  shadow-blue-gray-500/40 relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-clip-border text-white shadow-lg`}
-      >
+      >        
         <ReactPlayer
           url={`${project.video}`}
           height={"200px"}
