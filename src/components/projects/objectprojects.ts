@@ -30,7 +30,7 @@ const projetos = [
     link: "https://alunos-lfzt.onrender.com/api-docs/",
     github: "https://github.com/eliaszlsp/api_notas_aluno",
     tags: ["Javascript" , "node.js" , "express"],
-    color: "bg-lime-500",
+    color: "bg-zinc-800",
   },
 
 ];

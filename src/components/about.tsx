@@ -39,7 +39,7 @@ export function About(props: any) {
               <div className=" flex flex-col items-center justify-center max-lg:w-full">
                 <h1 className="text-center text-2xl">
                   Olá! Meu nome é <br />{" "}
-                  <span className="ml-44  text-3xl font-black text-white">
+                  <span className="ml-44  text-3xl font-black text-zinc-800">
                     Elias Lopes{" "}
                   </span>
                 </h1>
@@ -47,17 +47,17 @@ export function About(props: any) {
                 <p className="  text-white lg:w-[700px]   ">
                   {" "}
                   Eu sou um
-                  <span className="  text-lg font-bold text-white">
+                  <span className="  text-lg font-bold text-zinc-800">
                     {" "}
                     Desenvolvedor Full-stack ,
                   </span>{" "}
                   apaixonado por tecnologia e inovação. <br />
                   Neste portfólio, você encontrará uma coleção de projetos que
-                  fazem uso das principais tecnologias front-end do mercado.{" "}
-                  Gostaria de explorar? Segue o link logo abaixo.
+                  fazem uso das principais tecnologias front-end e back-end do
+                  mercado. Gostaria de explorar? Segue o link logo abaixo.
                 </p>
               </div>
-              <div>
+              <div className="flex flex-row  gap-4 ">
                 <button
                   className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                    transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
@@ -68,6 +68,15 @@ export function About(props: any) {
                   {" "}
                   Projetos
                 </button>
+                <a
+                  className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
+                   transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
+                  href="https://github.com/eliaszlsp"
+                  target="_blank"
+                >
+                  {" "}
+                  GitHub
+                </a>
               </div>
             </div>
 
@@ -85,7 +94,7 @@ export function About(props: any) {
           ref={props.referenceSobre}
           className="   flex  justify-evenly max-lg:w-full  lg:h-screen"
         >
-          <div className="flex h-[800px]  flex-col  items-center justify-evenly gap-5 px-4  max-lg:h-full max-lg:w-full  2xl:w-[1440px]">
+          <div className="flex flex-col  items-center justify-evenly gap-5 px-4  max-lg:h-full max-lg:w-full  2xl:w-[1440px]">
             <div className=" self-center text-5xl  font-bold max-lg:mt-10 max-lg:text-3xl max-lg:font-black">
               <h1> Sobre mim </h1>
             </div>
@@ -98,39 +107,14 @@ export function About(props: any) {
                   <div className=" flex w-[700px]  flex-col justify-center gap-3  max-lg:w-full">
                     <div className=" flex flex-col items-center justify-center max-lg:w-fit">
                       <p className="mb-2">
-                        Olá! Meu nome é Elias Lopes. Recentemente, descobri a
-                        área de desenvolvimento de software,o que me levou a
-                        fazer uma transição de carreira. <br /> Antes disso, eu
-                        trabalhava na área de comunicação como operador de
-                        telemarketing, mas não estava satisfeito com o salário
-                        que recebia.
-                      </p>
-                      <p className="mb-2">
-                        Um dia, um amigo meu que é desenvolvedor me perguntou :
-                        &ldquo;Já que você deseja mudar de área, por que não
-                        estudar programação?&rdquo; Foi então que comecei a
-                        pesquisar na internet sobre como aprender programação e
-                        acabei me tornando um desenvolvedor web Full-Stack.
-                      </p>
-                      <p className="mb-2">
-                        Agora, estou apaixonado por criar experiências digitais
-                        incríveis e funcionais. Tenho proficiência em{" "}
-                        <span className=" text-lg font-bold text-white">
-                          HTML5{" "}
-                        </span>
-                        ,{" "}
-                        <span className=" text-lg font-bold text-white">
-                          CSS3{" "}
-                        </span>{" "}
-                        ,
-                        <span className=" text-lg font-bold text-white">
-                          JAVASCRIPT{" "}
-                        </span>
-                        ,
-                        <span className=" text-lg font-bold text-white">
-                          NODE
-                        </span>{" "}
-                        entre outras linguagens e ferramentas.
+                        E aí, tudo bem? quero compartilhar uma história da minha
+                        vida. Antes, trabalhava na área de comunicação, mandando
+                        ver no telemarketing, mas o dinheiro estava escasso. Aí,
+                        um amigo que entende de programação soltou: Caramba, foi
+                        como um estalo! Comecei a estudar pela internet,
+                        buscando uns tutoriais, e agora já estudei e aprendi
+                        JavaScript e vários frameworks e bibliotecas que usam
+                        JavaScript como base.
                       </p>
                       <p className="mb-2">
                         Quer saber mais sobre minha história e meu trabalho?
