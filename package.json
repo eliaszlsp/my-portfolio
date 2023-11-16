@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
+    "eslint-config-prettier": "^9.0.0",
     "lottie-react": "^2.4.0"
   }
 }

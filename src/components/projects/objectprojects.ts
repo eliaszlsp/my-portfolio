@@ -26,7 +26,7 @@ const projetos = [
     title: " Api Cadastro de Alunos",
     ver: "",
     desc: "Este projeto é uma API que criei como parte de um desafio da Generation Brazil para me inscrever em um curso de AWS. Seu objetivo é cadastrar alunos e registrar suas notas do primeiro e segundo semestre.",   
-    video: "/alunos.jpg",
+    video: "/apialuno.mp4",
     link: "https://alunos-lfzt.onrender.com/api-docs/",
     github: "https://github.com/eliaszlsp/api_notas_aluno",
     tags: ["Javascript" , "node.js" , "express"],
