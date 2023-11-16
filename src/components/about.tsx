@@ -54,7 +54,7 @@ export function About(props: any) {
                   apaixonado por tecnologia e inovação. <br />
                   Neste portfólio, você encontrará uma coleção de projetos que
                   fazem uso das principais tecnologias front-end e back-end do
-                  mercado. Gostaria de explorar? Segue o link logo abaixo.
+                  mercado. Gostaria de explorar? Segue os links logo abaixo.
                 </p>
               </div>
               <div className="flex flex-row  gap-4 ">
@@ -173,7 +173,7 @@ export function About(props: any) {
 
         <section
           ref={props.referenceConhecimentos}
-          className=" flex w-full flex-col  items-center justify-center  text-5xl  
+          className=" flex w-full flex-col  lg:mb-32 items-center justify-center  text-5xl  
       font-bold max-lg:w-full"
         >
           <div
@@ -186,8 +186,8 @@ export function About(props: any) {
                 Conhecimentos
               </h1>
             </div>
-            <div className="  flex min-w-full  items-center justify-center   max-lg:w-full ">
-              <ul className="  flex  min-w-full  flex-row items-center     justify-between   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
+            <div className="  flex min-w-full  items-center justify-center  lg:h-full max-lg:w-full ">
+              <ul className="  flex  min-w-full  flex-row items-center      justify-between   max-lg:grid   max-lg:grid-cols-3  max-lg:gap-3">
                 {photosElements.map((nameElement, index) => {
                   return (
                     <li
@@ -212,7 +212,7 @@ export function About(props: any) {
             </div>
           </div>
         </section>
-        <div ref={props.referenceProjetos}>
+        <div className="lg:my-32" ref={props.referenceProjetos}>
           <Projects />
         </div>
       </main>

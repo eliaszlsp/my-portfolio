@@ -25,7 +25,7 @@ export default function Projects() {
 
   return (
     <div>
-      <section className=" mb-5 flex w-screen items-center justify-center ">
+      <section className=" mb-5 flex w-screen items-center  justify-center ">
         <div className="flex  w-full flex-col items-center max-lg:w-screen    max-lg:py-20 2xl:w-[1440px] ">
           <div className=" mb-12 px-4 text-5xl font-bold">
             <h1>Projetos</h1>
