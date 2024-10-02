@@ -23,7 +23,7 @@ export function Header(props: any) {
     }
 
     // Faça algo com a posição do scroll, se necessário
-    console.log(scrollTop);
+    console.log("gostou manda msg: 1197800-3500");
   };
  
   useEffect(() => {
