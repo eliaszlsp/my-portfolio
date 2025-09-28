@@ -1,18 +1,35 @@
 "use client";
 import Image from "next/image";
-
 import Projects from "./projects/projects";
-
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import computador from "../../public/animation/coding.json";
 import about from "../../public/animation/about.json";
+import { useScrollTo } from "@/hooks/useScrollTo";
 
-export function About(props: any) {
-  const handleClick = ({ projetos }: any) => {
-    projetos === "projetos"
-      ? props.referenceProjetos.current?.scrollIntoView({ behavior: "smooth" })
-      : "";
+const DynamicLottie = dynamic(() => import("lottie-react"), {
+  loading: () => <div className="h-[500px] w-[500px] bg-gray-200 animate-pulse rounded-lg" />,
+  ssr: false,
+});
+
+interface AboutProps {
+  referenceSobre: React.RefObject<HTMLElement>;
+  referenceProjetos: React.RefObject<HTMLDivElement>;
+  referenceConhecimentos: React.RefObject<HTMLElement>;
+}
+
+export function About({
+  referenceSobre,
+  referenceProjetos,
+  referenceConhecimentos,
+}: AboutProps) {
+  const refs = {
+    projetos: referenceProjetos,
+    sobre: referenceSobre,
+    conhecimentos: referenceConhecimentos,
   };
+
+  const { scrollTo } = useScrollTo(refs);
+
   const photosElements = [
     "html5icon",
     "css3icon",
@@ -61,11 +78,8 @@ export function About(props: any) {
                 <button
                   className="flex w-fit flex-row items-center  rounded-md  border border-[#47B4FC] px-4 py-2 text-2xl font-semibold 
                    transition-all delay-100 ease-in  hover:bg-[#3586BD]  "
-                  onClick={() => {
-                    handleClick({ projetos: "projetos" });
-                  }}
+                  onClick={() => scrollTo("projetos")}
                 >
-                  {" "}
                   Projetos
                 </button>
                 <a
@@ -81,7 +95,7 @@ export function About(props: any) {
             </div>
 
             <div className=" max-lg:hidden">
-              <Lottie
+              <DynamicLottie
                 animationData={computador}
                 loop={true}
                 className="h-[500px] w-[500px] "
@@ -91,7 +105,7 @@ export function About(props: any) {
         </section>
 
         <section
-          ref={props.referenceSobre}
+          ref={referenceSobre}
           className="   flex  justify-evenly max-lg:w-full  lg:h-screen"
         >
           <div className="flex flex-col  items-center justify-evenly gap-5 px-4  max-lg:h-full max-lg:w-full  2xl:w-[1440px]">
@@ -165,14 +179,14 @@ export function About(props: any) {
               </div>
 
               <div className="h-[500px] w-[500px] max-lg:hidden">
-                <Lottie animationData={about} loop={true} />
+                <DynamicLottie animationData={about} loop={true} />
               </div>
             </div>
           </div>
         </section>
 
         <section
-          ref={props.referenceConhecimentos}
+          ref={referenceConhecimentos}
           className=" flex w-full flex-col  lg:mb-32 items-center justify-center  text-5xl  
       font-bold max-lg:w-full"
         >
@@ -212,7 +226,7 @@ export function About(props: any) {
             </div>
           </div>
         </section>
-        <div className="lg:my-32" ref={props.referenceProjetos}>
+        <div className="lg:my-32" ref={referenceProjetos}>
           <Projects />
         </div>
       </main>

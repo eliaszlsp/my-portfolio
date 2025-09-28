@@ -6,11 +6,11 @@ import { HeaderResponsive } from "@/components/headeresponsive";
 import { useRef } from "react";
 
 export default function Home() {
-  const ref = {
-    sobre: useRef(),
-    projetos: useRef(),
-    Conhecimentos: useRef(),
-    contatos: useRef() as any,
+  const refs = {
+    sobre: useRef<HTMLElement>(null),
+    projetos: useRef<HTMLDivElement>(null),
+    conhecimentos: useRef<HTMLElement>(null),
+    contatos: useRef<HTMLDivElement>(null),
   };
 
   return (
@@ -18,26 +18,26 @@ export default function Home() {
       <div>
         <div className=" max-lg:hidden">
           <Header
-            referenceSobre={ref.sobre}
-            referenceProjetos={ref.projetos}
-            referenceConhecimentos={ref.Conhecimentos}
-            referenceContatos={ref.contatos}
+            referenceSobre={refs.sobre}
+            referenceProjetos={refs.projetos}
+            referenceConhecimentos={refs.conhecimentos}
+            referenceContatos={refs.contatos}
           />
         </div>
         <div className="lg:hidden">
           <HeaderResponsive
-            referenceSobre={ref.sobre}
-            referenceProjetos={ref.projetos}
-            referenceConhecimentos={ref.Conhecimentos}
-            referenceContatos={ref.contatos}
+            referenceSobre={refs.sobre}
+            referenceProjetos={refs.projetos}
+            referenceConhecimentos={refs.conhecimentos}
+            referenceContatos={refs.contatos}
           />
         </div>
         <About
-          referenceSobre={ref.sobre}
-          referenceProjetos={ref.projetos}
-          referenceConhecimentos={ref.Conhecimentos}
+          referenceSobre={refs.sobre}
+          referenceProjetos={refs.projetos}
+          referenceConhecimentos={refs.conhecimentos}
         />
-        <div ref={ref.contatos}>
+        <div ref={refs.contatos}>
           <Footer />
         </div>
       </div>

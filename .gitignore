@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# logs
+dev.log
+
+# Jules scratchpad
+jules-scratch/

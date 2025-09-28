@@ -22,7 +22,7 @@ const projetos = [
     color: "bg-lime-500",
   },
   {
-    id: 1,
+    id: 2,
     title: " Api Cadastro de Alunos",
     ver: "",
     desc: "Este projeto é uma API que criei como parte de um desafio da Generation Brazil para me inscrever em um curso de AWS. Seu objetivo é cadastrar alunos e registrar suas notas do primeiro e segundo semestre.",   
